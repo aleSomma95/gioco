@@ -6,10 +6,7 @@ let carta=document.getElementById("btnCarta")
 let sasso=document.getElementById("btnSasso")
 let forbice=document.getElementById("btnForbice")
 let pc = document.querySelector(".sceltaComputer")
-let scelgoCarta="paper.png"
-let scelgoSasso= "rock.png"
-let scelgoForbice = "scissors.png"
-let arr=[scelgoCarta, scelgoSasso, scelgoForbice]
+let arr=["paper.png", "rock.png", "scissors.png"]
 let num
 let contGiocatore=document.querySelector(".player")
 let contPc=document.querySelector(".pc")
@@ -39,7 +36,7 @@ function sceltePC(){
 }
 function sceltaCarta(){
     sceltePC()
-    img.src= scelgoCarta
+    img.src= "paper.png"
     img.style.visibility="visible"
     
     if(arr[num]==="paper.png"){
@@ -64,7 +61,7 @@ function sceltaCarta(){
 
 }
 function sceltaSasso(){
-    img.src=scelgoSasso
+    img.src="rock.png"
     img.style.visibility="visible"
     
     sceltePC()
@@ -88,7 +85,7 @@ function sceltaSasso(){
     return img
 }
 function sceltaForbice(){
-    img.src=scelgoForbice
+    img.src="scissors.png"
     img.style.visibility="visible"
     sceltePC()
    
@@ -104,7 +101,7 @@ function sceltaForbice(){
         contGiocatore.innerHTML=puntiGiocatore
     }
     else{
-        puntiPc
+        puntiPc++
         contPc.innerHTML=puntiPc
         console.log("perso")
     }   
