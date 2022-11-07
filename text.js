@@ -77,12 +77,12 @@ function sceltaSasso(){
         
     }
     else if(arr[num]==="paper.png"){
-        puntiGiocatore++
-        contGiocatore.innerHTML=puntiGiocatore
-    }
-    else{
         puntiPc++
         contPc.innerHTML=puntiPc
+    }
+    else{
+        puntiGiocatore++
+        contGiocatore.innerHTML=puntiGiocatore
         console.log("perso")
     }   
     return img
